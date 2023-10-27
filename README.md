@@ -20,7 +20,7 @@
 <br>
 -Lista de faculdades que oferencem descontos além do vestibular
 <br>
--Comparar nota MEC de cada faculdade para o curso desejado
+-Comparar nota MEC das faculdades para o curso desejado
 <br>
 -Mostrar todos os programas de estudo da faculdade além da graduação
 
