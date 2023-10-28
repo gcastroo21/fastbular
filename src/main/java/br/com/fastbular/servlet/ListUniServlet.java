@@ -11,19 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/create-uni")
-public class CreateUniServlet extends HttpServlet {
+@WebServlet("/find-all-unis")
+public class ListUniServlet extends HttpServlet {
+
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String uniName = req.getParameter("uni-name");
+        List<Uni> unis = new UniDao().findAllUnis();
 
-        Uni uni = new Uni(uniName);
+        req.setAttribute("unis", unis);
 
-        new UniDao().createUni(uni);
-
-        resp.sendRedirect("/find-all-unis");
+        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
 
     }
 

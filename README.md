@@ -1,5 +1,8 @@
 <h1>Fastbular</h1>
 
+<br>
+CREATE TABLE UNI(ID INT PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(255));
+
 <h2>Funcionalidades:</h2>
 
 -Cadastro/Login
@@ -18,7 +21,7 @@
 <br>
 -Possibilidade de assim que encontrar a faculdade que deseja ser direcionado para inscrição do vestibular em questão
 <br>
--Lista de faculdades que oferencem descontos além do vestibular
+-Lista de faculdades que oferecem descontos além do vestibular
 <br>
 -Comparar nota MEC das faculdades para o curso desejado
 <br>
