@@ -13,11 +13,18 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
+            <th>Actions</th>
         </tr>
         <c:forEach var="uni" items="${unis}">
             <tr>
-                <td></td>
+                <td>${uni.id}</td>
                 <td>${uni.name}</td>
+                <td>
+                    <form action="/delete-uni" method="post">
+                       <input type="hidden" id="id" name="id" value="${uni.id}">
+                       <button type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         </c:forEach>
     </table>

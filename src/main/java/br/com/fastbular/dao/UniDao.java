@@ -58,9 +58,10 @@ public class UniDao
 
             while (resultSet.next()) {
 
+                String uniId = resultSet.getString("id");
                 String uniName = resultSet.getString("name");
 
-                Uni uni = new Uni(uniName);
+                Uni uni = new Uni(uniId, uniName);
 
                 unis.add(uni);
 
@@ -80,6 +81,28 @@ public class UniDao
 
         }
 
+    }
+    public void deleteUniById(String uniId){
+         String SQL = "DELETE UNI WHERE ID= ?";
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, uniId);
+            preparedStatement.execute();
+
+            System.out.println("success on delete car with id: " + uniId);
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+
+        }
     }
 
 }
