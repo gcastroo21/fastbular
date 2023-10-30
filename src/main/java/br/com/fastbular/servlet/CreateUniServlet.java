@@ -17,11 +17,21 @@ public class CreateUniServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
+        String uniId = req.getParameter("id");
         String uniName = req.getParameter("uni-name");
 
-        Uni uni = new Uni(uniName);
+        Uni uni = new Uni(uniId, uniName);
 
-        new UniDao().createUni(uni);
+        UniDao UniDao = new UniDao();
+
+        if (uniId.isBlank()) {
+
+            UniDao.createUni(uni);
+
+        } else {
+
+            UniDao.updateUni(uni);
+        }
 
         resp.sendRedirect("/find-all-unis");
 

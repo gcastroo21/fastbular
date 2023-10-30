@@ -23,6 +23,8 @@
                     <form action="/delete-uni" method="post">
                        <input type="hidden" id="id" name="id" value="${uni.id}">
                        <button type="submit">Delete</button>
+                       <span> | </span>
+                       <a href="index.jsp?id=${uni.id}&name=${uni.name}">Update</a>
                     </form>
                 </td>
             </tr>
