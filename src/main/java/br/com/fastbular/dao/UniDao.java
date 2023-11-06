@@ -89,7 +89,7 @@ public class UniDao
             preparedStatement.setString(1, uniId);
             preparedStatement.execute();
 
-            System.out.println("success on delete car with id: " + uniId);
+            System.out.println("success on delete uni with id: " + uniId);
 
             connection.close();
 

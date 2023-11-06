@@ -17,7 +17,7 @@ public class DeleteUniServlet extends HttpServlet {
         String uniId = req.getParameter("id");
         new UniDao().deleteUniById(uniId);
 
-        resp.sendRedirect("/find-all-uni");
+        resp.sendRedirect("/find-all-unis");
 
     }
 

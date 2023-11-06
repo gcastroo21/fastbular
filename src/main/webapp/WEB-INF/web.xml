@@ -5,7 +5,7 @@
          id="WebApp_ID" version="3.0">
 
 
-  <display-name>car-store</display-name>
+  <display-name>uni-store</display-name>
 
   <listener>
     <listener-class>org.h2.server.web.DbStarter</listener-class>
