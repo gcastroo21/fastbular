@@ -7,7 +7,7 @@ CREATE TABLE UNI(ID INT PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(255));
 
 -Cadastro/Login
 <br>
--Comparar notas de corte das melhores universidades do mundo
+-Comparar notas de corte das melhores universidades do Brasil
 <br>
 -Comparar preços
 <br>
