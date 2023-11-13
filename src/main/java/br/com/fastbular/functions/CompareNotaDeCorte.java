@@ -2,7 +2,7 @@ package br.com.fastbular.functions;
 
 import java.sql.*;
 
-public class NotaDeCorte {
+public class CompareNotaDeCorte {
 
     public static void main(String[] args) throws SQLException {
         // Conectando ao banco de dados
