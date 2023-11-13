@@ -1,8 +1,5 @@
 <h1>Fastbular</h1>
 
-<br>
-CREATE TABLE UNI(ID INT PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(255));
-
 <h2>Funcionalidades:</h2>
 
 -Cadastro/Login
