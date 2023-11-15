@@ -1,4 +1,4 @@
-package br.com.fastbular.functions;
+package br.com.fastbular.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
-public class NotaMEC {
-    public static void main(String[] args) {
+public class NotaMecDAO {
+    public void NotaMEC(String nomeUni) {
         Scanner scanner = new Scanner(System.in);
         Connection conexao = null;
         try {
@@ -16,7 +16,7 @@ public class NotaMEC {
 
             // Solicita a universidade ao usuário
             System.out.println("Informe o nome da universidade:");
-            String nomeUni = scanner.nextLine();
+            nomeUni = scanner.nextLine();
 
             // Monta a consulta SQL
             String sql = "SELECT nota_do_mec FROM uni WHERE nome = ?";

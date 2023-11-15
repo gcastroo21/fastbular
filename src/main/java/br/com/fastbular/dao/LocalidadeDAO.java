@@ -1,17 +1,17 @@
-package br.com.fastbular.functions;
+package br.com.fastbular.dao;
 
 import java.sql.*;
 import java.util.*;
-public class FiltrarLocalidade {
+public class LocalidadeDAO {
 
-    public static void main(String[] args) throws SQLException {
+    public void FiltrarLocal(String localidade) throws SQLException {
         // Conectar ao banco de dados
         Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
         // Obter a localidade desejada do usuário
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite a localidade desejada: ");
-        String localidade = scanner.nextLine();
+        localidade = scanner.nextLine();
 
         // Criar um PreparedStatement para consultar o banco de dados
         PreparedStatement statement = connection.prepareStatement("SELECT * FROM uni WHERE cidade = ?");

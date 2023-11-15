@@ -1,15 +1,25 @@
-package br.com.fastbular.functions;
+package br.com.fastbular.dao;
 
 import java.sql.*;
+import java.util.Scanner;
 
-public class CompareNotaDeCorte {
+public class NotaDeCorteDAO {
 
-    public static void main(String[] args) throws SQLException {
+    public void CompareNotaCorte(String nomeUni1,String nomeUni2) throws SQLException {
+        // Criando um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitando ao usuário o nome das universidades
+        System.out.println("Digite o nome da primeira universidade: ");
+        nomeUni1 = scanner.nextLine();
+        System.out.println("Digite o nome da segunda universidade: ");
+        nomeUni2 = scanner.nextLine();
+
         // Conectando ao banco de dados
         Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
         // Criando a consulta SQL
-        String sql = "SELECT * FROM UNI WHERE nome = 'Faculdade A' OR nome = 'Faculdade B'";
+        String sql = "SELECT * FROM uni WHERE nome = '" + nomeUni1 + "' OR nome = '" + nomeUni2 + "'";
 
         // Executando a consulta
         Statement statement = connection.createStatement();

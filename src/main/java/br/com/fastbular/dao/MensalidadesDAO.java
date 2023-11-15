@@ -1,18 +1,28 @@
-package br.com.fastbular.functions;
+package br.com.fastbular.dao;
 
 import java.sql.*;
+import java.util.Scanner;
 
-public class CompareMensalidades {
+public class MensalidadesDAO {
 
-    public static void main(String[] args) throws SQLException {
+    public void CompareMensalidade(String nomeUni1,String nomeUni2,String curso) throws SQLException {
         // Conectando ao banco de dados
         Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+        // Lendo as entradas do usuário
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o nome da primeira universidade: ");
+        nomeUni1 = scanner.nextLine();
+        System.out.println("Digite o nome da segunda universidade: ");
+        nomeUni2 = scanner.nextLine();
+        System.out.println("Digite o nome do curso: ");
+        curso = scanner.nextLine();
 
         // Selecionando as mensalidades das faculdades
         String sql = "SELECT mensalidade FROM uni WHERE nome = ? AND curso = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1, "Faculdade X");
-        preparedStatement.setString(2, "Engenharia da Computação");
+        preparedStatement.setString(1, nomeUni1);
+        preparedStatement.setString(2, curso);
         ResultSet resultSet = preparedStatement.executeQuery();
 
         // Obtendo a mensalidade da primeira faculdade
@@ -24,8 +34,8 @@ public class CompareMensalidades {
         // Selecionando as mensalidades das faculdades
         sql = "SELECT mensalidade FROM uni WHERE nome = ? AND curso = ?";
         preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1, "Faculdade Y");
-        preparedStatement.setString(2, "Engenharia da Computação");
+        preparedStatement.setString(1, nomeUni2);
+        preparedStatement.setString(2, curso);
         resultSet = preparedStatement.executeQuery();
 
         // Obtendo a mensalidade da segunda faculdade
