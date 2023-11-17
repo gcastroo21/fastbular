@@ -11,5 +11,5 @@ CREATE TABLE UNI (
   cidade VARCHAR(255) NOT NULL,
   estado VARCHAR(255) NOT FULL,
   mensalidade FLOAT NOT NULL,
-  nota_do_mec FLOAT NOT NULL
+  mec FLOAT NOT NULL
 );
