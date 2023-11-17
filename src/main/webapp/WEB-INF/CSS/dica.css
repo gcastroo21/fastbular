@@ -1,0 +1,10 @@
+.espaco-dica {
+
+    background-color: #ffffff; /* Cor de fundo branco */
+    padding: 20px; /* Adicione preenchimento conforme necessário */
+    border-radius: 8px; /* Adicione borda arredondada conforme necessário */
+    width: 1300px;
+    height: 900px;
+    margin-left: 15%;
+    margin-top: 5%;
+}
