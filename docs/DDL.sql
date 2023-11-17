@@ -9,7 +9,7 @@ CREATE TABLE UNI (
   nome VARCHAR(255) NOT NULL,
   curso VARCHAR(255) NOT NULL,
   cidade VARCHAR(255) NOT NULL,
-  nota_de_corte FLOAT NOT NULL,
+  estado VARCHAR(255) NOT FULL,
   mensalidade FLOAT NOT NULL,
   nota_do_mec FLOAT NOT NULL
 );
