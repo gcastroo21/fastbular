@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.Container{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,0,2);
+    box-shadow: 0 15px 20px rgba(0,0,0,0,6);
+}
+.busca{
+    width: 40%;
+    height: 70%;
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(#202020 , #ff0077, #202020) ;
+    border-radius: 5%;
+}
+h2{
+    font-size: 45px;
+    margin-left: 40%;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 8px;
+    /*border-bottom: 1px solid silver;*/
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.input-box{
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.input-box label, .gender-title{
+    width: 95%;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.gender-title{
+    font-size: 16px;
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.input-box input:is(:focus,:valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0,2);
+}
+.gender-category label{
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+}
+.gender-category{
+    color: gainsboro;
+}
+.gender-category label, .gender-category input{
+    cursor: pointer;
+}
+.alert p{
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+.alert a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff0077;
+}
+.alert a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #202020;
+}
+.button-container{
+    margin: 15px 0;
+}
+.button-container button{
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 140px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #ff0077, #202020);
+    cursor: pointer;
+    transition: 0.3;
+}
+.button-container button:hover{
+    background-image: linear-gradient(to right, #ff0077, #202020);
+}
+.cadas{
+    text-decoration: none;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza no eixo principal (verticalmente) */
+    align-items: center; /* Centraliza no eixo transversal (horizontalmente) */
+}
+
+.input-box {
+    margin-bottom: 10px;
+}

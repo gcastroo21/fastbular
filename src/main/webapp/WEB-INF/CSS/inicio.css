@@ -1,0 +1,92 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #202631;
+  color: #ff0077;
+  font-family: "Itim", coursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 64px;
+  color: #ff0077;
+  border: 8px solid #ff0077;
+  padding: 16px 64px;
+  border-radius: 16px;
+
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #ff0077;
+
+  box-shadow: inset 0 0 32px #ff0077, 0 0 32px #ff0077;
+
+  position: relative;
+}
+
+.neon-btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0077;
+  left: 0;
+  top: 120%;
+
+  transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(64px);
+  opacity: 0.7;
+}
+
+.neon-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff0077;
+  box-shadow: 0 0 128px 32px #ff0077;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.neon-btn:hover::after,
+.neon-btn:focus::after {
+  opacity: 1;
+}
+
+.neon-btn:hover::before,
+.neon-btn:focus::before {
+  opacity: 1;
+}
+
+.neon-btn:hover,
+.neon-btn:focus {
+  color: #202631;
+  text-shadow: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .neon-btn {
+    margin-top: 10px; /* Adicione margem superior se desejar algum espaço entre o h1 e os links */
+  }
+  h1{
+    font-size: 80px;
+  }
+  h2{
+    font-size: 60px;
+  }
