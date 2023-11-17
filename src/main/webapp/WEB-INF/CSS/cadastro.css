@@ -15,7 +15,7 @@
 }
 .busca{
     width: 40%;
-    height: 70%;
+    height: 85%;
     position: absolute;
     top: 40%;
     left: 55%;
@@ -40,6 +40,7 @@ h2{
 }
 
 .input-box{
+    display: flex;
     flex-wrap: wrap;
     width: 50%;
     padding-bottom: 15px;
@@ -99,9 +100,8 @@ h2{
     margin: 15px 0;
 }
 .button-container button{
-    width: 60%;
+    width: 100%;
     margin-top: 10px;
-    margin-left: 140px;
     padding: 10px;
     display: block;
     font-size: 20px;
@@ -118,15 +118,4 @@ h2{
 .cadas{
     text-decoration: none;
     color: #fff;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza no eixo principal (verticalmente) */
-    align-items: center; /* Centraliza no eixo transversal (horizontalmente) */
-}
-
-.input-box {
-    margin-bottom: 10px;
 }
