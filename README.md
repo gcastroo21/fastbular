@@ -26,9 +26,6 @@
 ![image](https://github.com/gcastroo21/fastbular/assets/80531553/1b46fbaa-d005-4e3e-a162-d9f45f4c1e4c)
 <h4>Tela de dicas</h4>
 ![image](https://github.com/gcastroo21/fastbular/assets/80531553/7d95a661-0e6c-4237-b74e-0a03cf96ae55)
-<h4>Diagrama</h4>
-
-![image](https://github.com/gcastroo21/fastibular/assets/80531553/211165e9-f579-471b-b5b3-81cf4f3232df)
 
 
 
